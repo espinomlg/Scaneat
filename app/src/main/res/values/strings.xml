@@ -1,0 +1,35 @@
+<resources>
+    <!-- Strings for Activities -->
+    <string name="app_name">ScanEat</string>
+    <string name="user_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="remember_cb">Remember</string>
+    <string name="login_button">Login</string>
+
+    <!-- Strings for error messages -->
+    <string name="login_incorrect">This combination of user and password is incorrect</string>
+    <string name="user_incorrect">The user must be an email address</string>
+    <string name="password_incorrect_length">Password must contains at least 8 characters</string>
+    <string name="password_incorrect_upper">Password must contains at least an upper case letter</string>
+    <string name="password_incorrect_lower">Password must contains at least a lower case letter</string>
+    <string name="password_incorrect_digit">Password must contains at least a digit</string>
+    <string name="field_empty">This field cannot be empty</string>
+
+    <!-- Strings for messages -->
+    <string name="login_correct">Login correct</string>
+    <string name="restaurant_open">Open</string>
+    <string name="restaurant_close">Close</string>
+
+    <!-- Strings for models-->
+    <string name="model_dishname">Dish</string>
+    <string name="model_restaurant">Restaurant</string>
+    <string name="model_distance">Distance</string>
+    <string name="model_prices">Prices</string>
+    <string name="model_opened">Opened</string>
+    <string name="model_rating">Rating</string>
+    <string name="listitem_imagedescription">An image of the listed dish</string>
+    <string name="login_facebook">Log in with facebook</string>
+    <string name="login_googleplus">Log in with google+</string>
+
+
+</resources>
