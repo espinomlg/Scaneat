@@ -20,22 +20,22 @@ public class LoginPresenter implements IMVP.Presenter{
     @Override
     public void validateCredentials(String user, String password) {
         if(TextUtils.isEmpty(user))
-            view.setMessage(((Context)view).getResources().getString(R.string.field_empty),R.id.txiUser);
+            view.setMessage(((Context)view).getResources().getString(R.string.field_empty),R.id.login_txiUser);
 
         else if(TextUtils.isEmpty(password))
-            view.setMessage(((Context)view).getResources().getString(R.string.field_empty),R.id.txiPassword);
+            view.setMessage(((Context)view).getResources().getString(R.string.field_empty),R.id.login_txiPassword);
 
         else if(!password.matches(".*(\\d).*"))
-            view.setMessage(((Context)view).getResources().getString(R.string.password_incorrect_digit),R.id.txiPassword);
+            view.setMessage(((Context)view).getResources().getString(R.string.password_incorrect_digit),R.id.login_txiPassword);
 
         else if(!password.matches(".*(\\p{Lower}).*"))
-            view.setMessage(((Context)view).getResources().getString(R.string.password_incorrect_lower),R.id.txiPassword);
+            view.setMessage(((Context)view).getResources().getString(R.string.password_incorrect_lower),R.id.login_txiPassword);
 
         else if(!password.matches(".*(\\p{Upper}).*"))
-            view.setMessage(((Context)view).getResources().getString(R.string.password_incorrect_upper),R.id.txiPassword);
+            view.setMessage(((Context)view).getResources().getString(R.string.password_incorrect_upper),R.id.login_txiPassword);
 
         else if(password.length() < 8)
-            view.setMessage(((Context)view).getResources().getString(R.string.password_incorrect_length),R.id.txiPassword);
+            view.setMessage(((Context)view).getResources().getString(R.string.password_incorrect_length),R.id.login_txiPassword);
 
         else {
             view.setMessage(((Context) view).getResources().getString(R.string.login_correct), 0);

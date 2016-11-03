@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="error_appearance" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/colorError</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="hint_appearance" parent="TextAppearance.Design.Hint">
+        <item name="android:textColor">@color/colorHint</item>
+    </style>
+
+    <style name="counter_appearance" parent="TextAppearance.Design.Counter">
+        <item name="android:textColor">@color/colorHint</item>
+    </style>
+
+</resources>

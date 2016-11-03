@@ -17,7 +17,7 @@
         app:errorEnabled="true"
         app:errorTextAppearance="@style/error_appearance"
         app:hintTextAppearance="@style/hint_appearance"
-        android:id="@+id/txiUser">
+        android:id="@+id/login_txiUser">
 
         <EditText
             android:layout_width="match_parent"
@@ -29,7 +29,7 @@
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/txiUser"
+        android:layout_below="@+id/login_txiUser"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         app:errorEnabled="true"
@@ -38,7 +38,7 @@
         app:errorTextAppearance="@style/error_appearance"
         app:hintTextAppearance="@style/hint_appearance"
         app:counterTextAppearance="@style/counter_appearance"
-        android:id="@+id/txiPassword">
+        android:id="@+id/login_txiPassword">
 
         <EditText
             android:layout_width="match_parent"
@@ -52,7 +52,7 @@
         android:text="@string/remember_cb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/txiPassword"
+        android:layout_below="@+id/login_txiPassword"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:id="@+id/cbRemember" />
@@ -64,24 +64,24 @@
         android:layout_below="@+id/cbRemember"
         android:layout_centerHorizontal="true"
         android:onClick="login"
-        android:id="@+id/btnLogin" />
+        android:id="@+id/login_btnLogin" />
 
     <Button
         android:text="@string/login_facebook"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btnLogin"
+        android:layout_below="@+id/login_btnLogin"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/login_btnfacebook"
-        android:id="@+id/btnlogin_facebook"
+        android:id="@+id/login_btnlogin_facebook"
         android:onClick="login"/>
 
     <Button
         android:text="@string/login_googleplus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btnlogin_facebook"
+        android:layout_below="@+id/login_btnlogin_facebook"
         android:layout_centerHorizontal="true"
-        android:id="@+id/btnlogin_googleplus"
+        android:id="@+id/login_btnlogin_googleplus"
         android:onClick="login"/>
 </RelativeLayout>

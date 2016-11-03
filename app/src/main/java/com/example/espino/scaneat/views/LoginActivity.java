@@ -26,9 +26,9 @@ public class LoginActivity extends AppCompatActivity implements IMVP.View{
         setContentView(R.layout.activity_login);
 
         presenter = new LoginPresenter(this);
-        txiUser = (TextInputLayout) findViewById(R.id.txiUser);
-        txiPasswd = (TextInputLayout) findViewById(R.id.txiPassword);
-        login = (Button) findViewById(R.id.btnLogin);
+        txiUser = (TextInputLayout) findViewById(R.id.login_txiUser);
+        txiPasswd = (TextInputLayout) findViewById(R.id.login_txiPassword);
+        login = (Button) findViewById(R.id.login_btnLogin);
 
     }
 
@@ -38,12 +38,12 @@ public class LoginActivity extends AppCompatActivity implements IMVP.View{
         txiPasswd.setError(null);
 
         switch(idView){
-            case R.id.txiUser:
+            case R.id.login_txiUser:
                 txiUser.setError(message);
                 txiUser.requestFocus();
                 break;
 
-            case R.id.txiPassword:
+            case R.id.login_txiPassword:
                 txiPasswd.setError(message);
                 txiPasswd.requestFocus();
                 break;
