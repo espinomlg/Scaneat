@@ -3,7 +3,7 @@ package com.example.espino.scaneat.models;
 
 import java.util.ArrayList;
 
-public class Dish {
+public class Dish implements Comparable<Dish>{
 
     private String name,
     restaurantName,
@@ -126,5 +126,10 @@ public class Dish {
 
     public void setComentaries(int position, String comment) {
         this.comentaries.set(position,comment) ;
+    }
+
+    @Override
+    public int compareTo(Dish o) {
+        return Float.compare(this.globalRating, o.globalRating);
     }
 }
