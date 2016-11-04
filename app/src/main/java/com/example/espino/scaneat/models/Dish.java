@@ -1,6 +1,8 @@
 package com.example.espino.scaneat.models;
 
 
+import java.util.ArrayList;
+
 public class Dish {
 
     private String name,
@@ -8,7 +10,7 @@ public class Dish {
     description,
     ingredients;
 
-    private String[] comentaries;
+    private ArrayList<String> comentaries;
 
     private float price,
     globalRating,
@@ -16,13 +18,14 @@ public class Dish {
     qualityPriceRating,
     qualityRating;
 
-    private Allergens[] allergens;
+    private ArrayList<String> allergens;
 
-    //private Cuisine[] cuisine;
+    private ArrayList<String> cuisine;
 
 
     public Dish(String name, String restaurantName, String description, String ingredients, float price, float globalRating,
-                float presentationRating, float qualityPriceRating, float qualityRating, Allergens[] allergens, String[] comentaries) {
+                float presentationRating, float qualityPriceRating, float qualityRating, ArrayList allergens, ArrayList comentaries,
+                ArrayList cuisine) {
         this.name = name;
         this.restaurantName = restaurantName;
         this.description = description;
@@ -33,6 +36,8 @@ public class Dish {
         this.qualityPriceRating = qualityPriceRating;
         this.qualityRating = qualityRating;
         this.allergens = allergens;
+        this.comentaries = comentaries;
+        this.cuisine = cuisine;
     }
 
     public String getName() {
@@ -107,19 +112,19 @@ public class Dish {
         this.qualityRating = qualityRating;
     }
 
-    public Allergens getAllergens(int position) {
-        return allergens[position];
+    public String getAllergens(int position) {
+        return allergens.get(position);
     }
 
-    public void setAllergens(int position, Allergens alergen) {
-        this.allergens[position] = alergen;
+    public void setAllergens(int position, String commentary) {
+        this.allergens.set(position, commentary);
     }
 
     public String getComentaries(int position) {
-        return comentaries[position];
+        return comentaries.get(position);
     }
 
     public void setComentaries(int position, String comment) {
-        this.comentaries[position] = comment ;
+        this.comentaries.set(position,comment) ;
     }
 }

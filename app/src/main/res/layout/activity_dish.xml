@@ -32,23 +32,23 @@
 
     </LinearLayout>
     <TextView
-        android:text="TextView"
+        android:text="Nombre del plato"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/colorTextHighlight"
         android:id="@+id/dish_nametxt"
         android:layout_below="@id/dish_linearlayout_allergens"
-        android:textSize="23sp"
+        android:textSize="@dimen/text_big"
         android:textStyle="normal|bold" />
 
     <TextView
-        android:text="TextView"
+        android:text="Nombre del restaurante"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/colorPrimary"
         android:id="@+id/dish_restaurant"
         android:layout_below="@id/dish_nametxt"
-        android:textSize="15sp" />
+        android:textSize="@dimen/text_normal" />
 
     <TextView
         android:text="19€"
@@ -59,17 +59,17 @@
         android:layout_alignBaseline="@id/dish_restaurant"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:textSize="30sp" />
+        android:textSize="@dimen/text_huge" />
 
     <TextView
-        android:text="abipoefgiabogb"
+        android:text="Descripción del plato....\n.........\n..........."
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/colorDescription"
         android:id="@+id/dish_descriptiontxt"
         android:layout_below="@id/dish_restaurant"
         android:maxLines="4"
-        android:textSize="16sp"
+        android:textSize="@dimen/text_normal"
         android:minLines="4"
         />
 
@@ -81,10 +81,11 @@
         android:id="@+id/dish_linearlayout_cuisine">
 
         <TextView
-            android:text="adjksvbaviu db"
+            android:text="Tipos de cocina"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/colorDescription"
+            android:textSize="@dimen/text_normal"
             android:id="@+id/dish_cuisine_generacion_dinamica" />
 
     </LinearLayout>
@@ -111,15 +112,16 @@
             android:textColor="@color/colorTextHighlight"
             android:layout_toRightOf="@id/dish_ingredients_img"
             android:layout_toEndOf="@id/dish_ingredients_img"
-            android:textSize="16sp"
+            android:textSize="@dimen/text_normal"
             android:id="@+id/dish_ingredientstxt" />
         <TextView
-            android:text="adjksvbaviu db"
+            android:text="Ingredientes que contiene"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/colorDescription"
             android:layout_toRightOf="@id/dish_ingredients_img"
             android:layout_toEndOf="@id/dish_ingredients_img"
+            android:textSize="@dimen/text_small"
             android:layout_below="@id/dish_ingredientstxt"
             android:id="@+id/dish_ingredientsdescription" />
 
@@ -131,41 +133,50 @@
         android:layout_below="@id/dish_relativelayout_ingredients"
         android:orientation="horizontal"
         android:id="@+id/dish_linearlayout_ratings">
-    <TableRow>
+
+        <TableRow>
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="0px"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="@string/rate"/>
+            android:background="@drawable/app_button"
+            android:textColor="@color/white"
+            android:text="@string/rate" />
 
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0px"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
+                android:textSize="@dimen/text_normal"
+                android:layout_gravity="center"
                 android:text="@string/dish_presentationrate"
                 android:textColor="@color/colorTextHighlight"/>
             <!--Ratingbar -->
 
         </LinearLayout>
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0px"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
+                android:textSize="@dimen/text_normal"
+                android:gravity="center"
                 android:text="@string/dish_qualityprice"
                 android:textColor="@color/colorTextHighlight"/>
             <!--Ratingbar -->
 
         </LinearLayout>
-    </TableRow>
+        </TableRow>
     </TableLayout>
 
 </RelativeLayout>

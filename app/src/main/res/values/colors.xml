@@ -7,6 +7,7 @@
     <color name="colorHint">#4CAF50</color>
     <color name="colorTextHighlight">#ECEFF1</color>
     <color name="colorDescription">#E0E0E0</color>
-    <color name="blackAlpha">#EE000000</color>
+    <color name="blackAlpha">#ED000000</color>
     <color name="black">#FE000000</color>
+    <color name="white">#FFFFFF</color>
 </resources>

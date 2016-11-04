@@ -1,7 +1,7 @@
 package com.example.espino.scaneat.models;
 
 
-public class Allergens {
+public class gAllergens {
 
     private String name;
     private int image;
