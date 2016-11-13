@@ -88,6 +88,6 @@ public class DishItem implements Comparable<DishItem>{
 
     @Override
     public int compareTo(DishItem o) {
-        return Double.compare(this.distance, o.distance);
+        return Float.compare(this.rating, o.rating);
     }
 }

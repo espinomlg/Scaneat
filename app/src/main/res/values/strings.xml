@@ -5,6 +5,17 @@
     <string name="password_hint">Password</string>
     <string name="remember_cb">Remember</string>
     <string name="login_button">Login</string>
+    <string name="listitem_imagedescription">An image of the listed dish</string>
+    <string name="login_facebook">Log in with facebook</string>
+    <string name="login_googleplus">Log in with google+</string>
+    <string name="rate">Rate</string>
+    <string name="dish_presentationrate">Presentation</string>
+    <string name="dish_ingredientstitle">Ingredients</string>
+    <string name="dish_qualityprice">Quality/Price</string>
+    <string name="search_text">Find the best dishes!</string>
+    <string name="cuisine">Cuisine</string>
+    <string name="ubication">Ubication</string>
+    <string name="keyword">Keyword</string>
 
     <!-- Strings for error messages -->
     <string name="login_incorrect">This combination of user and password is incorrect</string>
@@ -27,13 +38,12 @@
     <string name="model_prices">Prices</string>
     <string name="model_opened">Opened</string>
     <string name="model_rating">Rating</string>
-    <string name="listitem_imagedescription">An image of the listed dish</string>
-    <string name="login_facebook">Log in with facebook</string>
-    <string name="login_googleplus">Log in with google+</string>
-    <string name="rate">Rate</string>
-    <string name="dish_presentationrate">Presentation</string>
-    <string name="dish_ingredientstitle">Ingredients</string>
-    <string name="dish_qualityprice">Quality/Price</string>
+    <string name="dishes">Dishes</string>
+    <string name="restaurants">Restaurants</string>
+    <string name="search">search</string>
+    <string name="email_hint">Email</string>
+    <string name="confirmPasswd_hint">Confirm password</string>
+    <string name="termsNconditions_hint">I agree the terms and use conditions</string>
 
 
 </resources>

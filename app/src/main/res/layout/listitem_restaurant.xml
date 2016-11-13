@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_launcher"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:id="@+id/listitem_restaurant_img" />
+
+    <TextView
+        android:text="Restaurant name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/listitem_restaurant_img"
+        android:layout_toEndOf="@+id/listitem_restaurant_img"
+        android:textSize="@dimen/text_big"
+        android:id="@+id/listitem_restaurant_name" />
+
+    <TextView
+        android:text="dirección"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/listitem_restaurant_name"
+        android:layout_toRightOf="@+id/listitem_restaurant_img"
+        android:layout_toEndOf="@+id/listitem_restaurant_img"
+        android:textSize="@dimen/text_normal"
+        android:id="@+id/listitem_restaurant_address" />
+
+    <TextView
+        android:text="valoración"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:textSize="@dimen/text_normal"
+        android:id="@+id/listitem_restaurant_rate" />
+</RelativeLayout>

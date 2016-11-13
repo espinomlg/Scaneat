@@ -50,7 +50,7 @@ public class LoginActivity extends AppCompatActivity implements IMVP.View{
 
             default:
                 Toast.makeText(LoginActivity.this, R.string.login_correct, Toast.LENGTH_SHORT).show();
-                Intent searchResults = new Intent(LoginActivity.this,SearchResultsActivity.class);
+                Intent searchResults = new Intent(LoginActivity.this,SearchActivity.class);
                 startActivity(searchResults);
         }
     }

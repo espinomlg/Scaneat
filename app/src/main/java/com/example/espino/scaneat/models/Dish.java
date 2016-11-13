@@ -15,16 +15,15 @@ public class Dish implements Comparable<Dish>{
     private float price,
     globalRating,
     presentationRating,
-    qualityPriceRating,
-    qualityRating;
+    qualityPriceRating;
 
-    private ArrayList<String> allergens;
+    private ArrayList<Allergens> allergens;
 
     private ArrayList<String> cuisine;
 
 
     public Dish(String name, String restaurantName, String description, String ingredients, float price, float globalRating,
-                float presentationRating, float qualityPriceRating, float qualityRating, ArrayList allergens, ArrayList comentaries,
+                float presentationRating, float qualityPriceRating, ArrayList allergens, ArrayList comentaries,
                 ArrayList cuisine) {
         this.name = name;
         this.restaurantName = restaurantName;
@@ -34,7 +33,7 @@ public class Dish implements Comparable<Dish>{
         this.globalRating = globalRating;
         this.presentationRating = presentationRating;
         this.qualityPriceRating = qualityPriceRating;
-        this.qualityRating = qualityRating;
+
         this.allergens = allergens;
         this.comentaries = comentaries;
         this.cuisine = cuisine;
@@ -104,20 +103,12 @@ public class Dish implements Comparable<Dish>{
         this.qualityPriceRating = qualityPriceRating;
     }
 
-    public float getQualityRating() {
-        return qualityRating;
-    }
-
-    public void setQualityRating(float qualityRating) {
-        this.qualityRating = qualityRating;
-    }
-
-    public String getAllergens(int position) {
+    public Allergens getAllergens(int position) {
         return allergens.get(position);
     }
 
-    public void setAllergens(int position, String commentary) {
-        this.allergens.set(position, commentary);
+    public void setAllergens(int position, Allergens allergen) {
+        this.allergens.set(position, allergen);
     }
 
     public String getComentaries(int position) {

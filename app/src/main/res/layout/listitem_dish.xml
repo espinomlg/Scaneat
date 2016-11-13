@@ -15,7 +15,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:contentDescription="@string/listitem_imagedescription"
-        android:id="@+id/listitem_image" />
+        android:id="@+id/listitem_dish_image" />
 
     <TextView
         android:text="@string/model_dishname"
@@ -24,9 +24,10 @@
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
         android:layout_marginStart="@dimen/activity_horizontal_margin"
         android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/listitem_image"
-        android:layout_toEndOf="@+id/listitem_image"
-        android:id="@+id/listitem_dishname" />
+        android:layout_toRightOf="@+id/listitem_dish_image"
+        android:layout_toEndOf="@+id/listitem_dish_image"
+        android:textSize="@dimen/text_big"
+        android:id="@+id/listitem_dish_dishname" />
 
     <TextView
         android:text="@string/model_restaurant"
@@ -34,10 +35,11 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
         android:layout_marginStart="@dimen/activity_horizontal_margin"
-        android:layout_below="@+id/listitem_dishname"
-        android:layout_toRightOf="@+id/listitem_image"
-        android:layout_toEndOf="@+id/listitem_image"
-        android:id="@+id/listitem_resutaurant" />
+        android:layout_below="@+id/listitem_dish_dishname"
+        android:layout_toRightOf="@+id/listitem_dish_image"
+        android:layout_toEndOf="@+id/listitem_dish_image"
+        android:textSize="@dimen/text_normal"
+        android:id="@+id/listitem_dish_resutaurant" />
 
     <TextView
         android:text="@string/model_distance"
@@ -45,10 +47,11 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
         android:layout_marginStart="@dimen/activity_horizontal_margin"
-        android:layout_below="@+id/listitem_resutaurant"
-        android:layout_toRightOf="@+id/listitem_image"
-        android:layout_toEndOf="@+id/listitem_image"
-        android:id="@+id/listitem_distance"/>
+        android:layout_below="@+id/listitem_dish_resutaurant"
+        android:layout_toRightOf="@+id/listitem_dish_image"
+        android:layout_toEndOf="@+id/listitem_dish_image"
+        android:textSize="@dimen/text_normal"
+        android:id="@+id/listitem_dish_distance"/>
 
     <TextView
         android:text="@string/model_opened"
@@ -59,8 +62,9 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignBaseline="@id/listitem_dishname"
-        android:id="@+id/listitem_opened" />
+        android:layout_alignBaseline="@id/listitem_dish_dishname"
+        android:textSize="@dimen/text_normal"
+        android:id="@+id/listitem_dish_opened" />
 
     <TextView
         android:text="@string/model_prices"
@@ -68,23 +72,25 @@
         android:layout_height="wrap_content"
         android:layout_marginRight="@dimen/activity_horizontal_margin"
         android:layout_marginEnd="@dimen/activity_horizontal_margin"
-        android:layout_below="@id/listitem_opened"
-        android:layout_alignBaseline="@id/listitem_resutaurant"
+        android:layout_below="@id/listitem_dish_opened"
+        android:layout_alignBaseline="@id/listitem_dish_resutaurant"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:id="@+id/listitem_prices" />
+        android:textSize="@dimen/text_normal"
+        android:id="@+id/listitem_dish_prices" />
 
     <TextView
         android:text="@string/model_rating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/listitem_prices"
+        android:layout_below="@id/listitem_dish_prices"
         android:layout_marginRight="@dimen/activity_horizontal_margin"
         android:layout_marginEnd="@dimen/activity_horizontal_margin"
-        android:layout_alignBaseline="@id/listitem_distance"
-        android:layout_alignLeft="@+id/listitem_prices"
-        android:layout_alignStart="@+id/listitem_prices"
-        android:id="@+id/listitem_rating" />
+        android:layout_alignBaseline="@id/listitem_dish_distance"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:textSize="@dimen/text_normal"
+        android:id="@+id/listitem_dish_rating" />
 
 
 </RelativeLayout>

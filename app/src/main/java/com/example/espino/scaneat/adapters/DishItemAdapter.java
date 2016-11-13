@@ -1,6 +1,7 @@
-package com.example.espino.scaneat.presenters;
+package com.example.espino.scaneat.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 import com.example.espino.scaneat.R;
 import com.example.espino.scaneat.ScanEatApplication;
 import com.example.espino.scaneat.models.DishItem;
+import com.example.espino.scaneat.views.DishActivity;
 
 import java.util.ArrayList;
 import java.util.Locale;
@@ -20,17 +22,29 @@ public class DishItemAdapter extends RecyclerView.Adapter<DishItemAdapter.DishIt
 
     private ArrayList<DishItem> searchresults;
     private Context context;
+    private View.OnClickListener listener;
 
     public DishItemAdapter(Context context){
         this.context = context;
-        searchresults = new ArrayList<>(((ScanEatApplication)context.getApplicationContext()).getSearchResults());
+        searchresults = new ArrayList<>(((ScanEatApplication)context.getApplicationContext()).getSearchResultsDish());
     }
 
+    public void setOnClickListener(View.OnClickListener listener){
+        if(this.listener != null)
+            this.listener = listener;
+    }
 
     @Override
     public DishItemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-        View item = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item, null);
+        View item = LayoutInflater.from(parent.getContext()).inflate(R.layout.listitem_dish, null);
+
+        item.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                context.startActivity(new Intent(context.getApplicationContext(), DishActivity.class));
+            }
+        });
 
         return new DishItemViewHolder(item);
     }
@@ -63,13 +77,13 @@ public class DishItemAdapter extends RecyclerView.Adapter<DishItemAdapter.DishIt
         public DishItemViewHolder(View item) {
             super(item);
 
-            img = (ImageView) item.findViewById(R.id.listitem_image);
-            name = (TextView) item.findViewById(R.id.listitem_dishname);
-            restaurantName = (TextView) item.findViewById(R.id.listitem_resutaurant);
-            rating = (TextView) item.findViewById(R.id.listitem_rating);
-            price = (TextView) item.findViewById(R.id.listitem_prices);
-            distance = (TextView) item.findViewById(R.id.listitem_distance);
-            opened = (TextView) item.findViewById(R.id.listitem_opened);
+            img = (ImageView) item.findViewById(R.id.listitem_dish_image);
+            name = (TextView) item.findViewById(R.id.listitem_dish_dishname);
+            restaurantName = (TextView) item.findViewById(R.id.listitem_dish_resutaurant);
+            rating = (TextView) item.findViewById(R.id.listitem_dish_rating);
+            price = (TextView) item.findViewById(R.id.listitem_dish_prices);
+            distance = (TextView) item.findViewById(R.id.listitem_dish_distance);
+            opened = (TextView) item.findViewById(R.id.listitem_dish_opened);
 
 
         }

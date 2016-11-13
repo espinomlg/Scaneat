@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin">
+
+    <TextView
+        android:text="@string/search_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="@dimen/text_big"
+        android:textColor="@color/colorPrimaryDark"
+        android:id="@+id/search_txv_find" />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search_txv_find"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        app:errorEnabled="true"
+        app:errorTextAppearance="@style/error_appearance"
+        app:hintTextAppearance="@style/hint_appearance"
+        android:id="@+id/search_txi_ubication">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/ubication" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search_txi_ubication"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        app:errorEnabled="true"
+        app:errorTextAppearance="@style/error_appearance"
+        app:hintTextAppearance="@style/hint_appearance"
+        android:id="@+id/search_txi_keyword">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/keyword" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search_txi_keyword"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:id="@+id/search_spn_cuisine" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search_spn_cuisine"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:id="@+id/search_linearlayout_cbs">
+
+        <CheckBox
+            android:text="@string/dishes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/search_cb_dish"
+            android:layout_weight="1"
+            android:onClick="onCheckBoxClick"
+            android:checked="true" />
+
+        <CheckBox
+            android:text="@string/restaurants"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/search_cb_restaurant"
+            android:onClick="onCheckBoxClick"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <Button
+        android:text="@string/search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_linearlayout_cbs"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/app_buttondark"
+        android:textColor="@color/white"
+        android:onClick="search"
+        android:id="@+id/button"
+        />
+
+</RelativeLayout>
