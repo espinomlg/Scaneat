@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="allergens">
+        <item>Altramuces</item>
+        <item>Apio</item>
+        <item>Cacahuetes</item>
+        <item>Carne</item>
+        <item>Gluten</item>
+        <item>Crustáceos</item>
+        <item>Frutos secos</item>
+        <item>Huevos</item>
+        <item>Lácteos</item>
+        <item>Moluscos</item>
+        <item>Mostaza</item>
+        <item>Pescado</item>
+        <item>Sésamo</item>
+        <item>Soja</item>
+        <item>Sulfitos</item>
+    </string-array>
+
+</resources>

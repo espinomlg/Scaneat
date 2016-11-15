@@ -16,6 +16,12 @@
     <string name="cuisine">Cuisine</string>
     <string name="ubication">Ubication</string>
     <string name="keyword">Keyword</string>
+    <string name="dishes">Dishes</string>
+    <string name="restaurants">Restaurants</string>
+    <string name="search">search</string>
+    <string name="email_hint">Email</string>
+    <string name="confirmPasswd_hint">Confirm password</string>
+    <string name="termsNconditions_hint">I agree the terms and use conditions</string>
 
     <!-- Strings for error messages -->
     <string name="login_incorrect">This combination of user and password is incorrect</string>
@@ -38,12 +44,15 @@
     <string name="model_prices">Prices</string>
     <string name="model_opened">Opened</string>
     <string name="model_rating">Rating</string>
-    <string name="dishes">Dishes</string>
-    <string name="restaurants">Restaurants</string>
-    <string name="search">search</string>
-    <string name="email_hint">Email</string>
-    <string name="confirmPasswd_hint">Confirm password</string>
-    <string name="termsNconditions_hint">I agree the terms and use conditions</string>
 
+
+
+    <!--Strings for action bar -->
+    <string name="user_preferences">User profile</string>
+    <string name="general_settings">General settings</string>
+    <string name="orderby_rating">Order by rating</string>
+    <string name="about">About</string>
+    <string name="filters">Filters</string>
+    <string name="Signup_button">Sign Up</string>
 
 </resources>

@@ -50,12 +50,20 @@ public class LoginActivity extends AppCompatActivity implements IMVP.View{
 
             default:
                 Toast.makeText(LoginActivity.this, R.string.login_correct, Toast.LENGTH_SHORT).show();
-                Intent searchResults = new Intent(LoginActivity.this,SearchActivity.class);
-                startActivity(searchResults);
+                Intent search = new Intent(LoginActivity.this,SearchActivity.class);
+                startActivity(search);
         }
     }
 
-    public void login(View v){
-        presenter.validateCredentials(txiUser.getEditText().getText().toString(), txiPasswd.getEditText().getText().toString());
+    public void onClickLogin(View v){
+        switch (v.getId()){
+            case R.id.login_btnLogin:
+                presenter.validateCredentials(txiUser.getEditText().getText().toString(), txiPasswd.getEditText().getText().toString());
+                break;
+            case R.id.login_btnSignUp:
+                startActivity(new Intent(LoginActivity.this, SignUpActivity.class));
+        }
+
+
     }
 }

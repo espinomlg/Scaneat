@@ -15,6 +15,7 @@ import com.example.espino.scaneat.models.DishItem;
 import com.example.espino.scaneat.views.DishActivity;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Locale;
 
 
@@ -22,17 +23,12 @@ public class DishItemAdapter extends RecyclerView.Adapter<DishItemAdapter.DishIt
 
     private ArrayList<DishItem> searchresults;
     private Context context;
-    private View.OnClickListener listener;
 
     public DishItemAdapter(Context context){
         this.context = context;
         searchresults = new ArrayList<>(((ScanEatApplication)context.getApplicationContext()).getSearchResultsDish());
     }
 
-    public void setOnClickListener(View.OnClickListener listener){
-        if(this.listener != null)
-            this.listener = listener;
-    }
 
     @Override
     public DishItemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -66,6 +62,11 @@ public class DishItemAdapter extends RecyclerView.Adapter<DishItemAdapter.DishIt
     @Override
     public int getItemCount() {
         return searchresults.size();
+    }
+
+    public void sortByRating(){
+        Collections.reverse(searchresults);
+        notifyDataSetChanged();
     }
 
 

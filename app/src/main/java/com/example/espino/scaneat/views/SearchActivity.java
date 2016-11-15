@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.view.menu.ActionMenuItemView;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
@@ -35,6 +38,42 @@ public class SearchActivity extends AppCompatActivity {
         searchDish = true;
 
         loadspnCuisine();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        getMenuInflater().inflate(R.menu.action_bar, menu);
+
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()){
+
+            case R.id.menu_action_sort:
+
+                break;
+
+            case R.id.menu_filters:
+                break;
+
+            case R.id.menu_userpreferences:
+                startActivity(new Intent(SearchActivity.this,UserPreferencesActivity.class));
+                break;
+
+            case R.id.menu_generalsettings:
+                startActivity(new Intent(SearchActivity.this,GeneralSettingsActivity.class));
+                break;
+
+            case R.id.menu_about:
+                break;
+
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     public void onCheckBoxClick(View v){

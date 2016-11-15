@@ -63,18 +63,33 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/login_cbRemember"
         android:layout_centerHorizontal="true"
-        android:onClick="login"
+        android:onClick="onClickLogin"
+        android:background="@drawable/app_buttondark"
+        android:textColor="@color/white"
         android:id="@+id/login_btnLogin" />
+
+    <Button
+        android:text="@string/Signup_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_btnLogin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:onClick="onClickLogin"
+        android:background="@drawable/app_buttondark"
+        android:textColor="@color/white"
+        android:id="@+id/login_btnSignUp" />
+
 
     <Button
         android:text="@string/login_facebook"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/login_btnLogin"
+        android:layout_below="@+id/login_btnSignUp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/login_btnfacebook"
         android:id="@+id/login_btnlogin_facebook"
-        android:onClick="login"/>
+        />
 
     <Button
         android:text="@string/login_googleplus"
@@ -83,5 +98,5 @@
         android:layout_below="@+id/login_btnlogin_facebook"
         android:layout_centerHorizontal="true"
         android:id="@+id/login_btnlogin_googleplus"
-        android:onClick="login"/>
+        />
 </RelativeLayout>

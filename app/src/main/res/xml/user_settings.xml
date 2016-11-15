@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditTextPreference
+        android:defaultValue="username"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="Username"
+        android:key="username" />
+    <EditTextPreference
+        android:defaultValue="email"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="Email"
+        android:key="email" />
+    <EditTextPreference
+        android:defaultValue="password"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="Password"
+        android:key="password" />
+    <MultiSelectListPreference
+        android:title="Allergens"
+        android:defaultValue="@array/allergens"
+        android:entries="@array/allergens"
+        android:entryValues="@array/allergens"
+        android:key="allergens"
+        android:summary="User's food allergies"/>
+</PreferenceScreen>

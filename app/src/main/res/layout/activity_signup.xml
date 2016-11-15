@@ -87,7 +87,7 @@
         android:id="@+id/signup_cb_termsNconditions" />
 
     <Button
-        android:text="Button"
+        android:text="@string/Signup_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/app_buttondark"
@@ -95,5 +95,6 @@
         android:layout_below="@+id/signup_cb_termsNconditions"
         android:layout_centerHorizontal="true"
         android:id="@+id/signup_btn_signup"
+        android:onClick="onClickSignUp"
         />
 </RelativeLayout>

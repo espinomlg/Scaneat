@@ -8,7 +8,8 @@ public class Dish implements Comparable<Dish>{
     private String name,
     restaurantName,
     description,
-    ingredients;
+    ingredients,
+    image;
 
     private ArrayList<String> comentaries;
 
@@ -24,7 +25,7 @@ public class Dish implements Comparable<Dish>{
 
     public Dish(String name, String restaurantName, String description, String ingredients, float price, float globalRating,
                 float presentationRating, float qualityPriceRating, ArrayList allergens, ArrayList comentaries,
-                ArrayList cuisine) {
+                ArrayList cuisine, String pathToImg) {
         this.name = name;
         this.restaurantName = restaurantName;
         this.description = description;
@@ -33,6 +34,7 @@ public class Dish implements Comparable<Dish>{
         this.globalRating = globalRating;
         this.presentationRating = presentationRating;
         this.qualityPriceRating = qualityPriceRating;
+        this.image = pathToImg;
 
         this.allergens = allergens;
         this.comentaries = comentaries;
