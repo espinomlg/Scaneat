@@ -6,8 +6,13 @@ public interface IMVP {
         void setMessage(String message, int idView);
     }
 
-    interface Presenter{
+    interface LoginPresenter {
         void validateCredentials(String user, String password);
     }
+
+    interface SignUpPresenter{
+        void validateCredentials(String user, String email, String passwd, String confirm);
+    }
+
 
 }

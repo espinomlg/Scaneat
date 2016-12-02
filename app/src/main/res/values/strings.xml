@@ -54,5 +54,7 @@
     <string name="about">About</string>
     <string name="filters">Filters</string>
     <string name="Signup_button">Sign Up</string>
+    <string name="email_incorrect">This email address isn\'t valid</string>
+    <string name="passsword_not_equal">Password fields aren\'t equals</string>
 
 </resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="payment">
+        <item name="tarjeta">Tarjeta</item>
+        <item name="paypal">Paypal</item>
+        <item name="bitcoin">Bitcoin</item>
+        <item name="movil">Móvil</item>
+        <item name="ticket">Ticket_restaurante</item>
+    </string-array>
+</resources>

@@ -9,7 +9,7 @@ import com.example.espino.scaneat.interfaces.IMVP;
 import com.example.espino.scaneat.models.LoginUser;
 
 
-public class LoginPresenter implements IMVP.Presenter{
+public class LoginPresenter implements IMVP.LoginPresenter {
 
     private IMVP.View view;
 
